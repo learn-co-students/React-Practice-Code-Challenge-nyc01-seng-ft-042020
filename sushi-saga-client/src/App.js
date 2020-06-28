@@ -25,6 +25,14 @@ class App extends Component {
     })
   }
 
+  changeSubmit = (value) => {
+    console.log(value, "is value")
+    this.setState((prevState)=>{
+      return {moneyLeft: prevState.moneyLeft + parseInt(value)}
+    })
+
+  }
+
   handleButton = () => {
     console.log("running this function")
     console.log(count)
@@ -63,6 +71,7 @@ class App extends Component {
         <Table 
           moneyLeft={this.state.moneyLeft}
           eaten={this.state.eaten}
+          changeSubmit={this.changeSubmit}
           />
       </div>
     );

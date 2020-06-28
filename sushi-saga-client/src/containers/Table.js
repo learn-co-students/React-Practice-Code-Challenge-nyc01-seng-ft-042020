@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import SushiForm from '../components/SushiForm'
 
 const Table = (props) => {
 
@@ -12,6 +13,8 @@ const Table = (props) => {
     <Fragment>
       <h1 className="remaining">
         You have: ${props.moneyLeft} remaining!
+        <SushiForm
+        changeSubmit = {props.changeSubmit}/>
       </h1>
       <div className="table">
         <div className="stack">
